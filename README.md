@@ -1,2 +1,2 @@
 Gordana Jovanovic's homework repositiry:
-gi
+https://github.com/GordanaJovanovic/bt-homework.git
