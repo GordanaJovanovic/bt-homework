@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="sr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="register.css" />
+    <title>Registar</title>
+</head>
+
+<body>
+    <form action="register.php" method="_REQUEST">
+        <fieldset>
+            <legend>Upis korisnika</legend>
+            <label for="ime">Ime</label>
+            <input type="text" id="ime" name="ime" required>*<br>
+            <br>
+            <label for="prezime">Prezime</label>
+            <input type="text" id="prezime" name="prezime" required>*<br>
+            <br>
+            <span>Izaberite pol</span> <!--može label, može p-->
+            <label for="male">Muški</label>
+            <input type="radio" id="male" name="gender" value="">
+            <label for="female">Ženski</label>
+            <input type="radio" id="female" name="gender"><br>*
+            <br>
+            <label for="email">email adresa</label>
+            <input type="email" id="email" name="email" required>*<br>
+            <br>
+            <label for="Password">Šifra</label>
+            <input type="password" id="Password" name="password_key" maxlength="15" required>*<br>
+            <br>
+            <label for="repassword">Ponoviti šifru</label>
+            <input type="password" id="repassword" name="repassword_key" placeholder="Uneti istu šifru" maxlength="15" required>*<br>
+            <br>
+            <label>Odabrati kurs</label><br>
+            <input type="checkbox" id="java_course" name="course[]" value="Java">
+            <label for="java_course">Java</label><br>
+            <input type="checkbox" id="js_course" name="course[]" value="JS">
+            <label for="js_course">JS</label><br>
+            <input type="checkbox" id="ython_course" name="course[]" value="Python">
+            <label for="python_course">Python</label><br>
+            <input type="checkbox" id="php_course" name="course[]" value="PHP">
+            <label for="php_course">PHP</label><br>
+            <br>
+            <label for="slika">Uneti sliku</label>
+            <input type="file" id="slika" name="picture"><br>
+            <br>
+            <p>*Obavezna polja</p>
+            <br>
+        </fieldset>
+        <br>
+        <button class="button" type="submit">Sačuvaj</button>
+        <button class="button" type="reset">Poništi</button>
+    </form>
+    <br>
+    <nav>
+        <a href="register.html">Registar</a>
+        <br>
+        <a href="list.html">Lista korisnika</a>
+    </nav>
+</body>
+
+</html>
