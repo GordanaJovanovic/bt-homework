@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+    <meta charset="UTF-8">
+    <title>Zadatak 1</title>
+</head>
+
+<!--1 ZADATAK:
+Napisati program koji izracunava maksimalan broj kalorija koju osoba sme da unese.
+Maksimalan broj kalorija se izracunava tako sto se tezina pomnozi sa faktorom aktivnosti i faktorom starosti 
+(max kalorija = tezina * faktor aktivnosti * faktor starosti).
+Faktor aktivnosti zavisi od zanimanja koju osoba, tako da:
+- Ako ima zanimanje 'programer' (bukvalno ako je neko to napisao)  ili 'administrativni radnik' ili 'menadzer' faktor aktivnosti je 100
+- Ako ima zanimanje 'policajac', 'vojnik' faktor aktivnosti je 200
+- Ako ima zanimanje 'sportista' faktor aktivnosti je 300
+- Za ostala zanimanja uzima se faktor aktivnosti 150
+Faktor starosti zavisi od broja godina, tako da:
+- Ako neko ima od 0 do 3 godine - faktor starosti je 1.9
+- Ako neko ima od 4 do 10 godina - faktor starosti je 1.5
+- Ako neko ima od 11 do 18 godina - faktor starosti je 1.2
+- Ako neko ima od 19 do 26 godina - faktor starosti je 1
+- Ako neko ima od 27 do 30 ili od 50 do 60 godina - faktor starosti je 0.8
+- Ako neko ima od 31 do 35 ili od 45 do 49 godina - faktor starosti je 0.7 
+- Ako neko ima od 36 do 44 ili preko 60 godina - faktor starosti je 0.6.
+Kreirati zadatak1.html gde ce biti forma za unos ovih parametara a kod resavati i ispisati resenje na zadatak1.php.-->
+
+<body>
+    <form action="zadatak1.php" method="GET">
+        <label for="weight">Masa tela:</label>
+        <input type="number" id="weight" name="masa" maxlength="6" required/> kg<br><br>
+        <label for="age">Godine:</label>
+        <input type="number" id="age" name="starost" maxlength="3" required/><br><br>
+        <select name="profession">
+            <option value="programmer">Programer</option>
+            <option value="admin">Administrativni radnik</option>
+            <option value="manager">Menadžer</option>
+            <option value="officer">Policajac</option>
+            <option value="soldier">Vojnik</option>
+            <option value="athlete">Sportista</option>
+            <option value="other">Ostalo</option>
+        </select><br><br>
+        <input type="submit" name="submit"/>
+    </form>
+</body>
+</html>

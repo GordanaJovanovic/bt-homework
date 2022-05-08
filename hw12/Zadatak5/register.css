@@ -1,0 +1,109 @@
+header {
+    height: 50px;
+    position: sticky;
+    background-color: rgba(22, 2, 100, 0.769);
+    padding-top: 10px;
+    border-radius: 10px;
+}
+
+nav {
+    margin: auto;
+    width: 30%;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: auto;
+    background-color: none;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+body {
+    background-color: black;
+    color:aqua;
+    margin: 20px;
+    padding: 100px;
+    font-size: 15;
+    font-family: 'Courier New';
+}
+
+fieldset {
+    border: solid;
+    border-color: #40ff00;
+    border-width: 2px;
+    border-radius: 20px;
+    align-items: center;
+    background-color: rgb(65, 62, 65);
+    height: 470px;
+    width: 450px;
+    max-width: 500px;
+    min-height: 400px;
+    cursor: wait;
+    margin-bottom: 20px;
+}
+
+form {
+    margin-bottom: 20px;
+}
+
+label {
+    display: inline-block;
+}
+
+.button {
+    color: rgba(46, 201, 46, 0.795);
+    background-color: navy;
+    align-items: center;
+}
+
+legend {
+    font-size: 20px;
+    font-style: italic;
+}
+
+#email {
+    text-decoration-line: underline;
+}
+
+p {
+    color: red;
+}
+
+footer {
+    background-color: rgba(22, 2, 100, 0.769);
+    height: 200px;
+    border-radius: 10px;
+}
+
+.upper {
+    display: inline-block;
+    margin: auto;
+    width: 100%;
+    height: 90%;
+    background-color: none;
+    color: white;
+   } 
+
+ .literatura {
+    width: 70%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    text-decoration: none;
+}
+
+footer .upper .log {
+    width: 29%;
+    float: right;
+    text-decoration: none;
+    color: white;
+    margin-bottom: 80%;
+}
+
+.html nav ul li a {
+    text-decoration: none;
+    color: white;
+}

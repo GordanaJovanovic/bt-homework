@@ -1,0 +1,58 @@
+header {
+    height: 50px;
+    position: sticky;
+    background-color: rgba(22, 2, 100, 0.769);
+    padding-top: 10px;
+    border-radius: 10px;
+}
+
+nav {
+    margin: auto;
+    width: 30%;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: auto;
+    background-color: none;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+footer {
+    background-color: rgba(22, 2, 100, 0.769);
+    height: 200px;
+    border-radius: 10px;
+}
+
+.upper {
+    display: inline-block;
+    margin: auto;
+    width: 100%;
+    height: 90%;
+    background-color: none;
+    color: white;
+   } 
+
+ .literatura {
+    width: 70%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    text-decoration: none;
+}
+
+footer .upper .log {
+    width: 29%;
+    float: right;
+    text-decoration: none;
+    color: white;
+    margin-bottom: 80%;
+}
+
+.html nav ul li a {
+    text-decoration: none;
+    color: white;
+}

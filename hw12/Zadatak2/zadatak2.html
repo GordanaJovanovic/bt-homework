@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+    <meta charset="UTF-8">
+    <title>Zadatak 2</title>
+</head>
+
+<!--2 ZADATAK: (empty, isset, is_null)
+Napisati program koji na osnovu zadate sirine i visine zida i na osnovu sirine i duzine jedne plocice,
+izracunava neophodan broj plocica da se poploca ceo zid.
+- Kreirajte fajl zadatak2.html u kome cete staviti formu, formu kreirajte proizvoljno.
+- Prihvatite ulazne parametre u zadatak2.php fajlu
+- Nazive ulaznih parametara definisite sami!!!
+- Proizvoljno izvrsiti neophodne provere!!!  
+Ispisati neophodan broj plocica na kraju programa-->
+
+<body>
+    <form action="zadatak2.php" method="GET">
+        <label for="weight">Širina zida:</label>
+        <input type="number" id="weight" name="wallw" required/> m<br><br>
+        <label for="height">Visina zida:</label>
+        <input type="number" id="height" name="wallh" required/> m<br><br>
+
+        Dimenzije pločica
+        <select name="tile">
+            <option value="" readonly></option>
+            <option value="20x50">20x50</option>
+            <option value="20x60">20x60</option>
+            <option value="25x40">25x40</option>
+            <option value="25x50">25x50</option>
+            <option value="25x70">25x70</option>
+            <option value="25x75">25x75</option>
+            <option value="28x85">28x85</option>
+            <option value="30x60">30x60</option>
+            <option value="30x90">30x90</option>
+            <option value="40x120">40x120</option>
+        </select> cm&sup2;<br><br>
+        <input type="submit" name="submit"/>
+    </form>
+
+</body>
+
+</html>

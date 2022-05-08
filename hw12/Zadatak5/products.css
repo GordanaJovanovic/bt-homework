@@ -1,0 +1,266 @@
+#wrapper {
+    margin: auto;
+}
+
+header {
+    height: 50px;
+    position: sticky;
+    background-color: rgba(22, 2, 100, 0.769);
+    padding-top: 10px;
+    border-radius: 10px;
+}
+
+nav {
+    margin: auto;
+    width: 30%;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: auto;
+    background-color: none;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+.container {
+    display: flex;
+    margin: 10px;
+    padding: 10px;
+}
+
+aside {
+    width: 13%;
+    height: 80%;
+    padding: 10px;
+    margin: 10px;
+    background-color: rgba(137, 43, 226, 0.507);
+    border-radius: 10px;
+}
+
+.filter {
+    margin: 10px;
+    padding: 10px;
+}
+
+select {
+    display: none;
+}
+
+main {
+    width: 86%;
+    padding: 20px;
+    margin: 10px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+h3 {
+     display: none;
+}
+
+.article {
+    margin: 10px;
+    padding: 10px;
+    text-decoration: none;
+}
+
+.title {
+    text-align: center;
+}
+
+img {
+    width: 50%;
+    height: 90%;
+}
+
+.info {
+    width: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.buy {
+    margin: auto;
+}
+
+p {
+    margin-top: auto;
+}
+
+button {
+    margin-bottom: auto;
+    cursor: pointer;
+    background-color: rgba(137, 43, 226, 0.507);
+}
+
+button:hover {
+    background-color: greenyellow;
+}
+
+footer {
+    background-color: rgba(22, 2, 100, 0.769);
+    height: 200px;
+    border-radius: 10px;
+}
+
+.upper {
+    display: inline-block;
+    margin: auto;
+    width: 100%;
+    height: 90%;
+    background-color: none;
+    color: white;
+   } 
+
+ .literatura {
+    width: 70%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    text-decoration: none;
+}
+
+footer .upper .log {
+    width: 29%;
+    float: right;
+    text-decoration: none;
+    color: white;
+    margin-bottom: 80%;
+}
+
+.html nav ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+#back {
+    position: fixed;
+    right: 5%;
+    bottom: 5%;
+    border: solid black 1px;
+    width: 30px;
+    background-color: rgb(115, 151, 172);
+    color: rgb(17, 17, 16);
+    z-index: 99%;
+    text-decoration: none;
+}
+
+@media only screen and (max-width: 1200px) {
+    #wrapper {
+        width: 100%;
+        margin: none;
+    }
+    nav {
+        width: 100%;
+        text-align: center;
+    }
+    aside {
+        width: 15%;
+        padding: 0;
+        margin: 0;
+    }
+    .article {
+        box-shadow: gray 2px;
+    }
+    .buy {
+        padding: auto;
+        display: block;
+        text-align: right;
+    }
+}
+
+@media only screen and (max-width: 922px) {
+    main {
+        width: 84%;
+        padding: 0;
+        margin: 10px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+    h4 {
+        font-size: small;
+    }
+    .buy {
+        padding: auto;
+        display: block;
+        text-align: right;
+        font-size: small;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .filter {
+        margin: 5px;
+        padding: 5px;
+    }
+    main {
+        width: 84%;
+        padding: 0;
+        margin: 10px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    body {
+        font-size: small;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    #wrapper {
+        width: 98%;
+        margin: none;
+    }
+    header {
+        width: 100%;
+        height: 5%;
+        padding-bottom: 2%;
+        margin: none;
+    }
+    nav{
+        width: 100%;
+    }
+    .container {
+        flex-wrap: wrap;
+        width: 95%;
+        margin: none;
+        padding: none;
+    }
+    aside {
+        width: 85%;
+        margin: none;
+        padding: none;
+        margin-left: 25px;
+    }
+    .filter {
+        display: none;
+    }
+    select {
+        margin: 10px;
+        padding: 10px;
+        margin-left: 15px;
+        margin-right: 15px;
+        display: inline-flex;
+        text-align: center;
+        font-size: small;
+    }
+    main {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        margin: none;
+    }
+    h3 {
+        text-align: center;
+        display: inline;
+        color: rgb(137, 43, 226);
+    }
+    .article {
+        width: 80%;
+        margin: 10px;
+        padding: 10px;
+        border: solid silver 1px;
+    }
+}

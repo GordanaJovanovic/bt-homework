@@ -9,13 +9,13 @@
 //Proveravati za svako obavezno polje da li je setovano i ako nije ispisati gresku na ekranu. Skloniti required.
 //Oba fajla smestiti u folder hw11 i pushovati na git.
 
-isset($_GET['submit']){
+//isset($_GET['submit']){
     $ime=$_GET['ime'];
     if (empty($_GET["ime"])) {
         $imeErr = "Ime je obavezno";
       } else {
         $ime = test_input($_GET["ime"]);
-      }
+      //}
 
     $prezime=$_GET['prezime'];
     if (empty($_GET["prezime"])) {
@@ -43,7 +43,7 @@ isset($_GET['submit']){
     $kursevi=$_GET['course[]'];
     $kursevi=array("Java", "JS", "Python", "PHP");
     implode('', $kursevi)
-}
+
 
 ?>
 
