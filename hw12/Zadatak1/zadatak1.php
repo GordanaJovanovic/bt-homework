@@ -31,11 +31,25 @@ $pro = 300;
 else if(isset($_GET['other']) $pro = $_GET['other']);
 $pro = 150;*/
 
+//var_dump[$__GET];
 
-
-if (isset($_GET['submit'])) {
-$mass = $__GET['weight'];
+$m = $__GET['mass'];
 $pro = $_GET['profession'];
+$a = $_GET['age'];
+
+if (empty($__GET['mass'])) {
+    die("Unesite masu tela!")
+}
+if (empty($__GET['pro'])) {
+    die("Odaberite profesiju!")
+}
+if (empty($__GET['age'])) {
+    die("Unesite godine!")
+}
+
+/*
+if (isset($_GET['submit'])) {
+
 if(isset($__GET['profession'] == 'programmer') || isset($__GET['profession'] == 'admin') || isset($__GET['profession'] == 'manager')) {
     $pro = 100;
 } else if(isset($__GET['profession'] == 'officer') || isset($__GET['profession'] == 'soldier')) {
@@ -45,6 +59,7 @@ if(isset($__GET['profession'] == 'programmer') || isset($__GET['profession'] == 
 } else if(isset($__GET['profession'] == 'other')) {
     $pro = 150;
 }
+*/
 
 /*Faktor starosti zavisi od broja godina, tako da:
 - Ako neko ima od 0 do 3 godine - faktor starosti je 1.9
@@ -55,9 +70,9 @@ if(isset($__GET['profession'] == 'programmer') || isset($__GET['profession'] == 
 - Ako neko ima od 31 do 35 ili od 45 do 49 godina - faktor starosti je 0.7 
 - Ako neko ima od 36 do 44 ili preko 60 godina - faktor starosti je 0.6.*/
 
-$age = $_GET['starost'];
 
-if(isset($_GET['starost'])  &&  ($_GET['starost'] >= 0 && $_GET['starost'] <= 3)); {
+
+/*if(isset($_GET['starost'])  &&  ($_GET['starost'] >= 0 && $_GET['starost'] <= 3)); {
     $age = 1.9;
 }
 if(isset($_GET['starost'])  &&  ($_GET['starost'] >= 4 && $_GET['starost'] <= 10)); {
@@ -79,6 +94,8 @@ if(isset($_GET['starost'])  &&  (($_GET['starost'] >= 36 && $_GET['starost'] <= 
     $age = 0.6;
 }
 }
+*/
+
 $cal = $mass * $pro * $age;
 
 ?>
