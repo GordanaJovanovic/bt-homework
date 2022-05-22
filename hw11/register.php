@@ -14,14 +14,14 @@
     if (empty($_GET["ime"])) {
         $imeErr = "Ime je obavezno";
       } else {
-        $ime = test_input($_GET["ime"]);
-      //}
+        $ime = $_GET["ime"];
+      }
 
     $prezime=$_GET['prezime'];
     if (empty($_GET["prezime"])) {
         $prezimeErr = "Prezime je obavezno";
       } else {
-        $prezime = test_input($_GET["prezime"]);
+        $prezime = $_GET["prezime"];
       }
 
     $pol=$_GET['gender'];
@@ -30,19 +30,26 @@
     if (empty($_GET["password_key"])) {
         $password_keyErr = "Lozinka je obavezna";
       } else {
-        $password_key = test_input($_GET["password_key"]);
+        $password_key = $_GET["password_key"];
       }
 
     $email=$_GET['email'];
      if (empty($_GET["password_key"])) {
         $password_keyErr = "Lozinka je obavezna";
       } else {
-        $password_key = test_input($_GET["password_key"]);
+        $password_key = $_GET["password_key"];
       }
 
-    $kursevi=$_GET['course[]'];
+      $pol=$_GET['gender'];
+      if (empty($_GET["gender"])) {
+         $password_keyErr = "Odaberite pol";
+       } else {
+        $pol=$_GET['gender'];
+       }
+
+    $kursevi=$_GET['course'];
     $kursevi=array("Java", "JS", "Python", "PHP");
-    implode('', $kursevi)
+    $kurs = implode(', ', $kursevi);
 
 
 ?>
@@ -55,11 +62,11 @@
 </head>
 
 <body>
-    <p> <?php if ($pol=="female") echo "Poštovana"; else echo "Poštovani"; echo $ime . $prezime?></p>
-    <p>Uspešno ste se registrovali na našem sajtu.</p><br>
-    <p>Vaša lozinka je: <?php echo $lozinka ?></p><br>
-    <p>Vaš username je: <?php echo $email ?></p><br>
-    <p>Vaši odabrani kursevi su: <?php echo $kursevi ?></p>
+    <p> <?php if ($pol=="female") echo "Poštovana "; else echo "Poštovani "; echo $ime." ".$prezime.","?></p>
+    <p>Uspešno ste se registrovali na našem sajtu.</p>
+    <p>Vaša lozinka je: <?php echo $lozinka ?></p>
+    <p>Vaš username je: <?php echo $email ?></p>
+    <p>Vaši odabrani kursevi su: <?php echo $kurs ?></p>
 
 </body>
 

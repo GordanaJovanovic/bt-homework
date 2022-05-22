@@ -8,11 +8,17 @@ echo "1.Zadatak <br><br>";
 $hwArray = ["Pera", "Milka", "Pera", "Sonja", "Danilo", "Marica", "Ivica", "Sonja", "Vanja", "Mira"];
 
 //a) Najpre u ovaj postojeci niz dodati vase ime.
-array_push($hwArray, "Gordana");
+if(in_array("Gordana", $hwArray)) {
+  die ('Ime Gordana već postoji!');
+} else array_push($hwArray, "Gordana");
 
 //b) Nakon toga dodati ime vase/g rodjaka/e na trecem mestu u nizu.
-$rodjaka=["Jelena"];
-array_splice($hwArray, 2, 0, $rodjaka);
+if(in_array("Jelena", $hwArray)) {
+  die ('Ime Jelena već postoji!');
+} else {
+  $rodjaka=["Jelena"];
+  array_splice($hwArray, 2, 0, $rodjaka);
+}
 
 //c) Nakon toga prebrojte koliko ucenika ima
 echo count($hwArray);
@@ -20,7 +26,9 @@ echo "<br>";
 echo "<br>";
 
 //d) Zatim dodati novog clana na pocetak niza
-array_unshift($hwArray, "Stevan");
+if(in_array("Stevan", $hwArray)) {
+  die ('Ime Stevan već postoji!');
+} else array_unshift($hwArray, "Stevan");
 
 //e) Zatim obrisati Danila iz niza
 /*$nizBezDanila = array_diff($hwArray, array('Danilo'));
@@ -32,7 +40,8 @@ array_unique($hwArray);
 array_values($hwArray);
 print_r($hwArray);
 
-//Za svako ubacivanje u niz ispitati da li postoji u nizu i ako vec postoji ne dozvoliti da se upise.???
+//URAĐENO: Za svako ubacivanje u niz ispitati da li postoji u nizu i ako vec postoji ne dozvoliti da se upise.
+
 
 echo "<br><br><br><br> 2. Zadatak <br><br>";
 /*Kreirati $data koja je niz asocijativnih nizova. Svaki asocijativni niz treba da ima strukturu:
@@ -105,13 +114,13 @@ $data = array(
  foreach ($data as $podatak) {
     echo $podatak['name'] . " " . $podatak['last_name'] . " " . "ima " . $podatak['age'] . " " . "godina i ";
     if($podatak['gender'] == "male" && $podatak['married'] == true) {
-      echo "je oženjen.";
+      echo "oženjen je.";
     } elseif($podatak['gender'] == "female" && $podatak['married'] == true) {
-     echo "je udata.";
+     echo "udata je.";
     } elseif($podatak['gender'] == "male" && $podatak['married'] == false) {
       echo "nije oženjen.";
     } elseif($podatak['gender'] == "female" && $podatak['married'] == false) {
-     echo "nje udata.";
+     echo "nije udata.";
     };
     echo " Ima prosečnu ocenu " . $podatak['avg_rating'] . ", a kurseve koje trenutno sluša su: ";
     $courses = implode(", ", $podatak['courses']);
